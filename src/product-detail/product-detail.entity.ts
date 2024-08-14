@@ -1,0 +1,39 @@
+import { Column, Table, DataType, PrimaryKey, Model } from 'sequelize-typescript';
+
+@Table
+export class ProductDetail extends Model{
+    @Column({
+        type:DataType.INTEGER,
+        autoIncrement:true,
+        primaryKey:true
+    })
+    idproductDetail:Number
+    @Column({
+        type:DataType.INTEGER
+    })
+    productid:Number
+    @Column({
+        type:DataType.STRING
+    })
+    weight:String
+    @Column({
+        type:DataType.STRING
+    })
+    salePrice:String
+    @Column({
+        type:DataType.STRING
+    })
+    retailPrice:String
+    @Column({
+        type:DataType.STRING
+    })
+    discount:String
+    @Column({
+        type:DataType.CHAR
+    })
+    isdiscountAvail:String
+    @Column({
+        type:DataType.STRING
+    })
+    stock_Sku:String
+}
